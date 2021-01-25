@@ -1,0 +1,1 @@
+# graphql-starwars-weblogic
