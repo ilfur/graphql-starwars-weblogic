@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <display-name>GraphQLHiWorld</display-name>
+    <servlet>
+        <servlet-name>HiWorldServlet</servlet-name>
+        <servlet-class>com.ichag.graphql.java.test.HiWorldServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StarWarsServlet</servlet-name>
+        <servlet-class>com.ichag.graphql.java.test.StarWarsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StarWarsSimpleServlet</servlet-name>
+        <servlet-class>com.ichag.graphql.java.test.StarWarsSimpleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HiWorldServlet</servlet-name>
+        <url-pattern>/graphql/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StarWarsServlet</servlet-name>
+        <url-pattern>/graphqlsw/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StarWarsSimpleServlet</servlet-name>
+        <url-pattern>/graphqlsw2/*</url-pattern>
+    </servlet-mapping>
+</web-app>

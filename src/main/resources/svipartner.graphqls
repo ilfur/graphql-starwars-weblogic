@@ -1,0 +1,52 @@
+#
+# Schemas must have at least a query root type
+#
+schema {
+    query: Query
+}
+
+type Partner {
+  partnernummer: Int!,
+  name: String!,
+  vorname: String!,
+  anrede: String!,
+  name2: String!,
+  geburtstag: String!,
+  kfz: [KFZ],
+  komposit: [Komposit],
+  rechtschutz: [Rechtschutz],
+  schaeden: [Schaeden]
+}
+
+type Komposit {
+    vertragsnummer: Int!,
+    objektArt: String!,
+    objektNr: String!,
+    objektBezeichnung: String!,
+    produktLangname: String!
+}
+
+type KFZ {
+    vertragsnummer: Int!,
+    objektArt: String!,
+    objektNr: String!,
+    produktLangname: String!
+    objektBezeichnung: String!
+}
+
+type Rechtschutz {
+    vertragsnummer: Int!,
+    produktLangname: String!
+}
+
+type Schaeden {
+     schadenIdentNummer: Int!,
+     bearbeitungStatus: String!,
+     schadendatum: String!,
+     risikobereichBezeichnung: String!
+}
+
+type Query {
+  partner(partnernummer: String): Partner
+}
+
